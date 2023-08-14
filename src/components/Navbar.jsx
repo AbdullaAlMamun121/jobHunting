@@ -3,6 +3,9 @@ import { AuthContext } from "../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import { BsFillPersonFill } from 'react-icons/bs';
 import { MdOutlineManageAccounts } from 'react-icons/md';
+import { AiFillHome } from 'react-icons/ai';
+import { FcAbout,FcContacts } from 'react-icons/fc';
+import { FiMoreHorizontal } from 'react-icons/fi';
 const Navbar = () => {
 
     const {user} = useContext(AuthContext);
@@ -54,18 +57,18 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
             >
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/"> <AiFillHome></AiFillHome> Home</Link>
               </li>
               <li>
-                <Link to="/about">About us</Link>
+                <Link to="/about"> <FcAbout></FcAbout> About us</Link>
               </li>
               <li>
-                <Link to="/contact">Contact us</Link>
+                <Link to="/contact"><FcContacts></FcContacts> Contact us</Link>
               </li>
               <li>
                 <a  className={`font-bold ${isMenuOpen ? "animate-bounce" : ""}`}
                 onClick={toggleMenu}
-                >Parent
+                ><FiMoreHorizontal></FiMoreHorizontal> More
                 </a>
                 <ul className={`p-2 ${isMenuOpen ? "visible" : "hidden"}`}>
                   <li>
@@ -98,19 +101,19 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link to="/" className="font-bold">Home</Link>
+              <Link to="/" className="font-bold"><AiFillHome></AiFillHome> Home</Link>
             </li>
             <li>
-              <Link to="/about" className="font-bold">About us</Link>
+              <Link to="/about" className="font-bold"><FcAbout></FcAbout> About us</Link>
             </li>
             <li>
-              <Link to="/contact" className="font-bold">Contact us</Link>
+              <Link to="/contact" className="font-bold"><FcContacts></FcContacts> Contact us</Link>
             </li>
             <li tabIndex={0}>
               <details>
                 <summary className={`font-bold ${isMenuOpen ? "animate-bounce" : ""}`}
-                onClick={toggleMenu}>Parent</summary>
-                <ul className={`p-2 ${isMenuOpen ? "visible" : "hidden"}`}>
+                onClick={toggleMenu}><FiMoreHorizontal></FiMoreHorizontal> More</summary>
+                <ul className={`p-2 ${isMenuOpen ? "visible" : "hidden"} z-10`}>
                   <li>
                     <a>Job Seeker</a>
                   </li>
