@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
-
+import { Link } from "react-router-dom";
+import { BsFillPersonFill } from 'react-icons/bs';
+import { MdOutlineManageAccounts } from 'react-icons/md';
 const Navbar = () => {
 
     const {user} = useContext(AuthContext);
@@ -52,13 +54,13 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
             >
               <li>
-                <a>Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a>About us</a>
+                <Link to="/about">About us</Link>
               </li>
               <li>
-                <a>Contact us</a>
+                <Link to="/contact">Contact us</Link>
               </li>
               <li>
                 <a  className={`font-bold ${isMenuOpen ? "animate-bounce" : ""}`}
@@ -96,13 +98,13 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a className="font-bold">Home</a>
+              <Link to="/" className="font-bold">Home</Link>
             </li>
             <li>
-              <a className="font-bold">About us</a>
+              <Link to="/about" className="font-bold">About us</Link>
             </li>
             <li>
-              <a className="font-bold">Contact us</a>
+              <Link to="/contact" className="font-bold">Contact us</Link>
             </li>
             <li tabIndex={0}>
               <details>
@@ -136,8 +138,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Login</a>
-          <a className="btn">SignUp</a>
+          <Link to="/login" className="btn mr-5"> <BsFillPersonFill></BsFillPersonFill>Login</Link>
+          <Link to="/signup" className="btn"> <MdOutlineManageAccounts></MdOutlineManageAccounts> SignUp</Link>
         </div>
       </div>
     );
