@@ -7,7 +7,7 @@ import { AiFillHome } from "react-icons/ai";
 import { FcAbout, FcContacts } from "react-icons/fc";
 import { FiMoreHorizontal } from "react-icons/fi";
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {
@@ -180,15 +180,24 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
-        <Link to="/login" className="btn mr-5">
-          {" "}
-          <BsFillPersonFill></BsFillPersonFill>Login
-        </Link>
-        <Link to="/signup" className="btn">
-          {" "}
-          <MdOutlineManageAccounts></MdOutlineManageAccounts> SignUp
-        </Link>
+      {/* login and logout */}
+       <div className="navbar-end">
+        {user ? (
+          // Show Logout button if user is logged in
+          <button className="btn mr-5" onClick={logOut}>
+            Logout
+          </button>
+        ) : (
+          // Show Login and SignUp buttons if user is not logged in
+          <>
+            <Link to="/login" className="btn mr-5">
+              <BsFillPersonFill></BsFillPersonFill>Login
+            </Link>
+            <Link to="/signup" className="btn">
+              <MdOutlineManageAccounts></MdOutlineManageAccounts> SignUp
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );
