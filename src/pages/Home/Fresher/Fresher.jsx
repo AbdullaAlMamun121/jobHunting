@@ -5,7 +5,7 @@ import HText from "../../../shared/HText";
 const Fresher = () => {
   const [jobList, setJobList] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/jobs")
+    fetch("https://job-hunter-server-eight.vercel.app/jobs")
       .then((res) => res.json())
       .then((result) => {
         console.log(result);

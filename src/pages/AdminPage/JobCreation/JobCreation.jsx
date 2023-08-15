@@ -41,7 +41,7 @@ const JobCreation = () => {
           };
           // accessing mongodb to input
           axios
-            .post("http://localhost:5000/jobs", newItems)
+            .post("https://job-hunter-server-eight.vercel.app/jobs", newItems)
             .then((data) => {
               if (data.data.insertedId) {
                 reset();

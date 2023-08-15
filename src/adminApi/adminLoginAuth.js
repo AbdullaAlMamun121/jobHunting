@@ -2,7 +2,7 @@ export const loginUser = async (email, password) => {
     const user = { email, password };
 
     try {
-      const response = await fetch('http://localhost:5000/login', {
+      const response = await fetch('https://job-hunter-server-eight.vercel.app/login', {
         method: 'POST',
         headers: {
           'content-Type': 'application/json',

@@ -90,7 +90,7 @@ const Navbar = () => {
               </a>
               <ul className={`p-2 ${isMenuOpen ? "visible" : "hidden"}`}>
                 <li>
-                  <a>Job Seeker</a>
+                  <Link to="/">Job Seeker</Link>
                 </li>
                 <li>
                   <Link to="/dashboard/adminLogin">Job poster</Link>
@@ -149,7 +149,7 @@ const Navbar = () => {
               </summary>
               <ul className={`p-2 ${isMenuOpen ? "visible" : "hidden"} z-10`}>
                 <li>
-                  <a>Job Seeker</a>
+                  <Link to="/">Job Seeker</Link>
                 </li>
                 <li>
                   <Link to="/dashboard/adminLogin">Job poster</Link>

@@ -6,7 +6,7 @@ export const saveUserInDB = (phoneNumber,email,password,userRole) => {
         role: userRole,
     }
 
-    fetch(`http://localhost:5000/users/${email}`, {
+    fetch(`https://job-hunter-server-eight.vercel.app/users/${email}`, {
         method: 'PUT',
         headers: {
             'content-type': 'application/json'
