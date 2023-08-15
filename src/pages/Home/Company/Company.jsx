@@ -1,44 +1,50 @@
 import { useState } from "react";
 import HText from "../../../shared/HText";
 import { motion } from "framer-motion";
+import company1 from "../../../assets/comapnyImage/c1.png"
+import company2 from "../../../assets/comapnyImage/c2.png"
+import company3 from "../../../assets/comapnyImage/c3.png"
+import company4 from "../../../assets/comapnyImage/c4.png"
+import company5 from "../../../assets/comapnyImage/c5.jpeg"
+import company6 from "../../../assets/comapnyImage/c6.png"
 
 const Company = () => {
   const companies = [
     {
       id: 1,
-      image: "image-url-1",
-      companyName: "Bangladeshi Company 1",
-      description: "Bangladeshi IT Company 1 description.",
+      image: company1,
+      companyName: "Rokomari",
+      description: "Rokomari is an internet marketplace. They says that they neither promotes or deliberately holds any product back by artificial means such as arbitrary ...",
     },
     {
       id: 2,
-      image: "image-url-2",
-      companyName: "Bangladeshi Company 2",
-      description: "Bangladeshi IT Company 2 description.",
+      image: company2,
+      companyName: "Pandamart",
+      description: "pandamart is our one-stop-shop that features your favourite brands. Pick from shampoo and cosmetics to snacks and fresh produce and we'll deliver in just 30 ...",
     },
     {
       id: 3,
-      image: "image-url-3",
-      companyName: "Bangladeshi Company 3",
-      description: "Bangladeshi IT Company 3 description.",
+      image: company3,
+      companyName: "Unimart",
+      description: "Unimart is the super shop, which is not just for Pick-&-Buy, it offers Browse-&-Shop Experience to the consumers. Thanks to the large number of Suppliers we",
     },
     {
       id: 4,
-      image: "image-url-4",
-      companyName: "Worldwide Company 1",
-      description: "Worldwide IT Company 1 description.",
+      image: company4,
+      companyName: "Daraz",
+      description: "Bangladesh's best online shopping store with 17+ million products at resounding discounts in dhaka, ctg & All across Bangladesh with cash on delivery (COD)",
     },
     {
       id: 5,
-      image: "image-url-5",
-      companyName: "Worldwide Company 2",
-      description: "Worldwide IT Company 2 description.",
+      image: company5,
+      companyName: "Nogod",
+      description: "Nagad is a Bangladeshi Digital Financial Service, operating under the authority of Bangladesh Post Office",
     },
     {
       id: 6,
-      image: "image-url-6",
-      companyName: "Worldwide Company 3",
-      description: "Worldwide IT Company 3 description.",
+      image: company6,
+      companyName: "Unilever",
+      description: "Unilever is a British multinational consumer packaged goods company founded on 2 September 1929",
     },
   ];
   const [selectedCompany, setSelectedCompany] = useState(null);

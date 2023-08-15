@@ -17,7 +17,7 @@ const Fresher = () => {
 
   return (
     <>
-      <div  id="fresherSection" className="mx-auto min-h-full w-5/6 py-20">
+      <div id="fresherSection" className="mx-auto min-h-full py-20">
         <div>
           <motion.div
             initial="hidden"
@@ -34,32 +34,34 @@ const Fresher = () => {
             </HText>
           </motion.div>
         </div>
-        {fresherJobs.slice(0, showAllJob ? undefined : 6).map((job) => (
-          <div key={job._id} className="my-5 card w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img src={job?.image} />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">
-                <span className="font-semibold">Job Title:</span>
-                {job?.name}
-              </h2>
-              <p>
-                <span className="font-semibold">Address:</span>
-                {job.address}
-              </p>
-              <p>
-                <span className="font-semibold">Company Name:</span>
-                {job?.companyName}
-              </p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Apply Now</button>
+        <div className="mx-auto min-h-full w-5/6 py-20 flex flex-wrap gap-10 justify-center">
+          {fresherJobs.slice(0, showAllJob ? undefined : 6).map((job) => (
+            <div key={job._id} className="my-5 card w-96 bg-base-100 shadow-xl">
+              <figure>
+                <img src={job?.image} />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">
+                  <span className="font-semibold">Job Title:</span>
+                  {job?.name}
+                </h2>
+                <p>
+                  <span className="font-semibold">Address:</span>
+                  {job.address}
+                </p>
+                <p>
+                  <span className="font-semibold">Company Name:</span>
+                  {job?.companyName}
+                </p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-primary">Apply Now</button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
         <div className="text-center mt-8">
-          {fresherJobs.length > 0 && !showAllJob && (
+          {fresherJobs.length > 6 && !showAllJob && (
             <button
               className="btn btn-secondary text-center"
               onClick={() => setShowAllJob(true)}
