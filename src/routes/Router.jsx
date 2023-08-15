@@ -5,6 +5,9 @@ import Login from "../components/Login";
 import SignUp from "../components/SignUp";
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
+import Dashboard from "../layouts/Dashboard";
+import AdminLogin from "../pages/AdminPage/adminLogin/AdminLogin";
+import AdminSignup from "../pages/AdminPage/adminSignup/AdminSignup";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +34,21 @@ const router = createBrowserRouter([
           path:"contact",
           element:<Contact></Contact>
         }
+      ]
+    },
+    {
+      path: "dashboard",
+      element: <Dashboard></Dashboard>,
+      children:[
+        {
+            path:"adminLogin",
+            element:<AdminLogin></AdminLogin>
+        },
+        {
+            path:"adminSignup",
+            element:<AdminSignup></AdminSignup>
+        },
+        
       ]
     },
   ]);
