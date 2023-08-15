@@ -8,6 +8,8 @@ import Contact from "../pages/Contact/Contact";
 import Dashboard from "../layouts/Dashboard";
 import AdminLogin from "../pages/AdminPage/adminLogin/AdminLogin";
 import AdminSignup from "../pages/AdminPage/adminSignup/AdminSignup";
+import JobCreation from "../pages/AdminPage/JobCreation/JobCreation";
+import AdminHome from "../pages/AdminPage/AdminHome/AdminHome";
 
 const router = createBrowserRouter([
     {
@@ -48,7 +50,14 @@ const router = createBrowserRouter([
             path:"adminSignup",
             element:<AdminSignup></AdminSignup>
         },
-        
+        {
+          path:"adminHome",
+          element:<AdminHome></AdminHome>
+        },
+        {
+          path:"createJob",
+          element:<JobCreation></JobCreation>
+        }
       ]
     },
   ]);

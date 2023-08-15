@@ -15,7 +15,7 @@ export const loginUser = async (email, password) => {
         const token = data.token;
         localStorage.setItem('token', token);
         console.log('Login successful'); 
-        window.location.replace("/dashboard");
+        window.location.replace("/dashboard/adminHome");
       } else {
         const errorData = await response.json();
         console.error(errorData.message); 

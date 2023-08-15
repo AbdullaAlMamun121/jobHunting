@@ -14,7 +14,7 @@ export const saveUserInDB = (phoneNumber,email,password,userRole) => {
         body: JSON.stringify(currentUser)
     }).then(res => res.json()).then(data => {
         console.log(data)
-        window.location.href="/dashboard";
+        window.location.href="/dashboard/adminHome";
     }).catch(error => {
         console.error('Error saving user:', error);
       });
