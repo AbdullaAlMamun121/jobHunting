@@ -10,6 +10,9 @@ import AdminLogin from "../pages/AdminPage/adminLogin/AdminLogin";
 import AdminSignup from "../pages/AdminPage/adminSignup/AdminSignup";
 import JobCreation from "../pages/AdminPage/JobCreation/JobCreation";
 import AdminHome from "../pages/AdminPage/AdminHome/AdminHome";
+import Profile from "../pages/Profile/Profile";
+import Blog from "../pages/Blog/Blog";
+
 
 const router = createBrowserRouter([
     {
@@ -35,6 +38,14 @@ const router = createBrowserRouter([
         {
           path:"contact",
           element:<Contact></Contact>
+        },
+        {
+          path:"profile",
+          element:<Profile></Profile>
+        },
+        {
+          path:"blog",
+          element:<Blog></Blog>
         }
       ]
     },
@@ -57,7 +68,8 @@ const router = createBrowserRouter([
         {
           path:"createJob",
           element:<JobCreation></JobCreation>
-        }
+        },
+
       ]
     },
   ]);
