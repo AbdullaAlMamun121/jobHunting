@@ -31,7 +31,7 @@ const Navbar = () => {
   }
 
     return (
-      <div className={`navbar bg-[#E1EEFF] container ${
+      <div className={`navbar bg-[#E1EEFF] container z-30 ${
         isScrolled ? "fixed top-0 bg-opacity-90 shadow-md" : ""
       }`}>
         <div className="navbar-start">
